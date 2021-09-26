@@ -8,8 +8,10 @@
   
   <title>Frontend Mentor | IP Address Tracker</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
 </head>
 <body>
 
@@ -23,39 +25,19 @@
     UTC <!-- add offset value dynamically using the API -->
   ISP
   
-<div class="main">afasdflkasaklfaslsalsalkjaslkdjlklkasdklfjaskljdflkasdflklkfslkdjflkasflkasdaslkdfjalksdjflkasdfasf</div>
-  <script src="index.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-$.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
-  console.log(JSON.stringify(data, null, 2));
-  let userIp = JSON.stringify(data, null, 2)
-
-  document.querySelector(".main").innerHTML = userIp
-
-  var ip = "8.8.8.8";
-    var api_key = "at_eFMjvs94s3EqPKEA1SL9fwvX7MhQA";
-    $(function () {
-       $.ajax({
-           url: "https://geo.ipify.org/api/v1",
-           data: {apiKey: api_key},
-          //  data: {apiKey: api_key, ipAddress: ip},
-           success: function(data) {
-              console.log(data)
-               $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
-           }
-       });
-    });
-
-
-
+<div class="main">
   
-});
-
-
-    
-
+</div>
+<div id="mapid"></div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="index.js" defer></script>
+  
+<script type="text/javascript">
 
 </script>
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
 </body>
 </html>
