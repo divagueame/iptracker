@@ -17,13 +17,14 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
             // console.log(data.location['lng'])
             let lat = data.location['lat'];
             let lng = data.location['lng']
-            var map = L.map('mapid').setView([lat, lng],8);
+            var map = L.map('mapid').setView([lat, lng],10);
 
             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              attributionControl: false,
             maxZoom: 18
             })
             .addTo(map);
+
+            var marker = L.marker([lat, lng]).addTo(map);
 
             // console.log(data.location)
               //  $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");

@@ -1,5 +1,12 @@
 body{
   margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-image: url(./images/pattern-bg.png);
+  margin: 0;
+
 }
 #mapid {
   height: 500px;
