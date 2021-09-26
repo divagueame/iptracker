@@ -23,7 +23,7 @@
     UTC <!-- add offset value dynamically using the API -->
   ISP
   
-
+<div class="main">afasdflkasaklfaslsalsalkjaslkdjlklkasdklfjaskljdflkasdflklkfslkdjflkasflkasdaslkdfjalksdjflkasdfasf</div>
   <script src="index.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- <script type="text/javascript">
@@ -45,8 +45,9 @@
 
 $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
   console.log(JSON.stringify(data, null, 2));
+  let userIp = JSON.stringify(data, null, 2)
 
-  
+  document.querySelector(".main").innerHTML = userIp
 });
 </script>
 </body>
