@@ -14,7 +14,7 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
           //  data: {apiKey: api_key, ipAddress: ip},
            success: function(data) {
               // console.log(data)
-              //  $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+               $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
            }
        });
     });
@@ -26,4 +26,12 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
 
 
     
-var mymap = L.map('mapid').setView([42.4299, 8.6446], 13);
+// var mymap = L.map('mapid').setView([42.4299, 8.6446], 13);
+var map = L.map('mapid').
+setView([40.66, -5.72],
+12);
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+maxZoom: 18
+}).addTo(map);
