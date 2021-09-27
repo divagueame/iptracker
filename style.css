@@ -8,14 +8,52 @@ body{
 * {
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
-}
-
-/* * {box-sizing:border-box;} */
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box}
  .wrapper{
   background-image: url(./images/pattern-bg.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center center;
   height: 30%;
+  background-size: cover;
+  text-align: center;
+ }
+
+ .wrapper> div {
+   /* background-color: rgb(255, 255, 255); */
+   width: 90%;
+   margin: auto;
+   
+ }
+
+ .inputWrapper {
+   background-color: white;
+   border-radius: 12px;
+   
+   display: flex;
+   justify-content: space-between;
+ }
+ .ipnum {
+  padding: 22px;
+ }
+ .send-btn{
+  width: 58px;
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 0 12px 12px 0;
+  /* text-align: center; */
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 25px;
+  /* padding-bottom: 22px; */
+  /* margin: 12px; */
+ }
+ .send-btn-img {
+   /* margin: auto 0; */
+  height: 14px;
+  background-image: url('./images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
  }
 
 .main {
@@ -25,7 +63,7 @@ body{
   /* display: none; */
   background-image: url(./images/pattern-bg.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top;
   /* background-size: cover; */
   background-size: auto;
   /* width: 100vh;  */
@@ -37,16 +75,11 @@ text-align: center;
 .title {
   padding: 1rem 0.4rem 1.4rem 0.4rem;
   color:white;
-  /* display: block; */
-  /* margin: auto; */
-  /* width: 100%; */
   font-weight: 500;
   font-size: 24px;
-  /* background-color: brown; */
 }
 .ipAddress, .overlay {
- width: 100px; 
- 
+ /* width: 100px; */
  background-color: white;
  width: 250px;
  /* border-radius: 12px; */
@@ -60,16 +93,6 @@ text-align: center;
   height: 70px;
   border-radius: 12px 0px 0px 12px;
   overflow: hidden;
-}
-.send-btn {
-  background-color: hsl(0, 0%, 17%);
-  border-radius: 0 12px 12px 0;
-  background-image: url('./images/icon-arrow.svg');
-  /* background-repeat: no-repeat; */
-  /* background-size: contain; */
-  /* margin: 0; */
-  /* padding: 0; */
-  /* width: 50px; */
 }
 
 .overlay {
@@ -98,7 +121,7 @@ text-align: center;
 input[type=text] {
   padding: 20px;
   border: 0;
-  color: black
+  /* color: black */
 }
 
 input[type=submit]  {
