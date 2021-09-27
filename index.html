@@ -12,25 +12,51 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin=""/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="wrapper">
+    <div class="wtitle">IP Address Tracker</div>
+    <div class="overlay">POLLAS</div>
+  </div>
+  <div id="mapid"></div>
+
 <div class="main">
   <div class="title">IP Address Tracker</div>
-  <div class="ipAddress">IP Address</div>
+  <div class="ipAddress">
+    <!-- <div class="text-box">192.212.144.101</div> -->
+    
+    <input type="text" name="id_input" id="id_input" placeholder="192.212.144.101"></div>
+    <div class="send-btn">s</div>
+    <!-- <input type="submit" value=""> -->
+
+  <div class="overlay">
+    <div class="ipbox">
+      <div class="overlay-header">IP ADDRESS</div>
+      <div class="overlay-info">192.212.1.213</div>
+    </div>
+    <div class="locationbox">
+      <div class="overlay-header">Location</div>
+      <div class="overlay-info"> Brooklyn, NY 23001</div>
+    </div>
+    <div class="timezonebox">
+      <div class="overlay-header">UTC</div>
+      <div class="overlay-info"> -2:00</div>
+    </div>
+    <div class="ispbox">
+      <div class="overlay-header">ISP</div>
+      <div class="overlay-info">SpaceX Starlink</div>
+    </div>
+  </div>
 </div>
-<div id="mapid"></div>
 
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
 
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="index.js" defer></script>
-  
-<script type="text/javascript">
-
-</script>
-
-
+<script src="index.js" defer></script>
 </body>
 </html>
