@@ -23,7 +23,6 @@ body{
  }
 
  .wrapper> div {
-   /* background-color: rgb(255, 255, 255); */
    width: 90%;
    margin: auto;
    
@@ -63,6 +62,9 @@ input[type=text] {
   /* padding-bottom: 22px; */
   /* margin: 12px; */
  }
+ .send-btn:hover, .inputWrapper{
+   cursor: pointer;
+ }
  .send-btn-img {
    /* margin: auto 0; */
   height: 14px;
@@ -74,7 +76,7 @@ input[type=text] {
  .overlay {
   position: absolute;
   z-index: 10000 !important;
-  top: 170px;
+  top: 150px;
   left: 0px;
   position: absolute; 
   left: 0; 
@@ -82,7 +84,9 @@ input[type=text] {
   padding: 28px;
   border-radius: 12px;
 }
-
+.vertical-spacer{
+  display: none;
+}
 .overlay > div:not(:last-child) {
   /* padding: 12px */
   margin-bottom: 27px;
@@ -173,6 +177,42 @@ text-align: center;
 } */
 
 @media only screen and (min-width:769px) {
-  .main {background-size: contain;
-  background-color: blueviolet;}
+
+.inputWrapper {
+  max-width: 50%;
+}
+input:focus{
+  outline: none;
+}
+ .overlay {
+   /* display:block; */
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline
+ }
+ 
+  .overlay > div:not(:first-child)  {
+    /* background-color: yellow; */
+    text-align: left;
+    border-left: 2px solid #d8d8d8;
+    margin-bottom: 7px;
+    margin: 2px;
+    padding-left: 20px;
+  }
+
+  .vertical-spacer{
+    display: block;
+    /* size: 20px; */
+    color: hsl(0, 0%, 59%);
+    width: 1px; /* Line width */
+    background-color: hsl(0, 0%, 59%); /* Line color */
+    height: 75px; /* Override in-line if you want specific height. */
+    /* float: left; Causes the line to float to left of content. 
+      You can instead use position:absolute or display:inline-block
+      if this fits better with your design */
+  }
+
+
+
+
 }
