@@ -64,19 +64,19 @@ body{
   position: absolute; 
   left: 0; 
   right: 0;  
-  padding: 20px;
+  padding: 28px;
   border-radius: 12px;
 }
 
-.overlay > div {
+.overlay > div:not(:last-child) {
   /* padding: 12px */
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
  .overlay-header {
    /* background-color: yellow; */
   letter-spacing: 2px;
   font-size: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   color: hsl(0, 0%, 59%);
   font-weight: 700;
 }
