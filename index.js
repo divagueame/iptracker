@@ -11,18 +11,14 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
        $.ajax({
            url: "https://geo.ipify.org/api/v1",
            data: {apiKey: api_key},
-          //  data: {apiKey: api_key, ipAddress: ip},
            success: function(data) {
-            // console.log(data.location['lat'])
-            // console.log(data.location['lng'])
             let lat = data.location['lat'];
             let lng = data.location['lng']
             var map = L.map('mapid').setView([lat, lng],15);
 
-            L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18
-            })
-            // .addTo(map);
+            // L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            // maxZoom: 18
+            // }).addTo(map);
 
 
             googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
