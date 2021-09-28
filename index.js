@@ -17,18 +17,23 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
             // console.log(data.location['lng'])
             let lat = data.location['lat'];
             let lng = data.location['lng']
-            var map = L.map('mapid').setView([lat, lng],10);
+            var map = L.map('mapid').setView([lat, lng],15);
 
             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18
             })
+            // .addTo(map);
+
+
+            googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+            })
             .addTo(map);
 
-
-            var greenIcon = L.icon({
+            var userIcon = L.icon({
               iconUrl: './images/icon-location.svg',
-          
-              // iconSize:     [38, 95], // size of the icon
+              iconSize:     [46, 56], // size of the icon
               // shadowSize:   [50, 64], // size of the shadow
               // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
               // shadowAnchor: [4, 62],  // the same for the shadow
@@ -36,7 +41,7 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
           });
 
 
-            var marker = L.marker([lat, lng], {icon: greenIcon}).addTo(map);
+            var marker = L.marker([lat, lng], {icon: userIcon}).addTo(map);
 
             // console.log(data.location)
               //  $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
