@@ -56,6 +56,55 @@ body{
   background-size: contain;
  }
 
+ .overlay {
+  position: absolute;
+  z-index: 10000 !important;
+  top: 170px;
+  left: 0px;
+  position: absolute; 
+  left: 0; 
+  right: 0;  
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.overlay > div {
+  /* padding: 12px */
+  margin-bottom: 30px;
+}
+ .overlay-header {
+   /* background-color: yellow; */
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin-bottom: 15px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 700;
+}
+.overlay-info{
+  /* font-size: 114px; */
+  font-weight: 500;
+  /* background-color: wheat; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main {
   display: none;
   background-color: rgba(68, 173, 54);
@@ -95,23 +144,9 @@ text-align: center;
   overflow: hidden;
 }
 
-.overlay {
-  position: absolute;
-  z-index: 10000 !important;
-  top: 170px;
-  left: 0px;
-  position: absolute; 
-  left: 0; 
-  right: 0;  
-  padding: 20px;
-}
 
-.overlay-header {
-  font-size: 12px;
-}
-.overlay-info{
-  font-size: 1.2rem;
-}
+
+
 #mapid {
   width: 100%;
   height: 70%;
