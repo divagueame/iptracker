@@ -13,9 +13,37 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
            data: {apiKey: api_key},
            success: function(data) {
             let lat = data.location['lat'];
+            let newLat = lat + 0.003
             let lng = data.location['lng']
-            var map = L.map('mapid').setView([lat, lng],15);
+            var map = L.map('mapid', {zoomControl: false }).setView([newLat, lng],15);
+            // This Information 
+            let thisIp = data.ip
 
+            let thisCity  = data.location.city
+            let thisPostalCode = data.location.postalCode
+            let thisLocation = `${thisCity}, ${thisPostalCode}`
+
+            let thisTimezone = data.location.timezone
+
+            let thisIsp = data.as.name
+
+            newInfo = [thisIp,thisLocation,thisTimezone, thisIsp]
+
+            function refreshInfo(newInfoArray){
+              
+              let layers = document.querySelectorAll('.overlay-info')
+              layers = Array.from(layers)
+              
+              layers.forEach((element,i) => {
+                element.innerHTML = newInfoArray[i]
+              });
+            }
+            refreshInfo(newInfo)
+            // console.log(data.ip)
+            // console.log(data.location.city)
+            // console.log(data.location.postalCode)
+            // console.log(data.location.timezone)
+            // console.log(data.as.name)
             // L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             // maxZoom: 18
             // }).addTo(map);
